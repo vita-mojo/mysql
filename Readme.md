@@ -462,6 +462,9 @@ constructor. In addition to those options pools accept a few extras:
 * `queueLimit`: The maximum number of connection requests the pool will queue
   before returning an error from `getConnection`. If set to `0`, there is no
   limit to the number of queued connection requests. (Default: `0`)
+* `connectionLifeTime`: The maximum lifetime of connection in pool. This is useful 
+  in clustered configurations to force load balancing after cluster is scaling up. 
+  If set to `0`, there is no maximum lifetime (infinite lifetime). (Default: `0`)
 
 ## Pool events
 
